@@ -30,7 +30,9 @@
 </head>
 <body>
 <div id="placenta">
-<!--	<div id="top_menu">
+<!--
+
+	<div id="top_menu">
 		{{if $smarty.session.user_id>0}}
 			<span>Привет, {{$smarty.session.display_name}}</span>
 			&nbsp;&nbsp;|&nbsp;&nbsp;
@@ -45,10 +47,16 @@
 			<a href="{{$config.project_url}}/signup.php" class="hl">Регистрация</a>
 			<a href="{{$config.project_url}}/login.php" class="hl">Вход</a>
 		{{/if}}
-	</div> -->
+	</div> 
+	
+	-->
+	
+	
 	<div id="header">
+		<!--
 		<div id="advertising">
 		</div>
+		-->
 		<div>
 			{{if $storage.list_videos_common_videos_list.sort_by=='post_date' && $storage.list_videos_common_videos_list.list_type==''}}
 				{{assign var="list_videos_type" value="latest"}}
@@ -57,9 +65,12 @@
 			{{elseif ($storage.list_videos_common_videos_list.sort_by=='video_viewed' || $storage.list_videos_common_videos_list.sort_by=='video_viewed_today' || $storage.list_videos_common_videos_list.sort_by=='video_viewed_week' || $storage.list_videos_common_videos_list.sort_by=='video_viewed_month') && $storage.list_videos_common_videos_list.list_type==''}}
 				{{assign var="list_videos_type" value="video_viewed"}}
 			{{/if}}
+			
 			<div id="main_menu">
+				
 				<nav>
 				<ul>
+				<a href="{{$config.project_url}}/" > <img src="http://itube.kaztrk.kz/images/logo.png" height="20"> </a>
 				<li><a href="{{$config.project_url}}/" title="Главная" {{if $smarty.server.SCRIPT_NAME=='/index.php'}}class="selected"{{/if}}>Главная</a></li>
 				<li><a href="{{$config.project_url}}/latest-updates/"  title="Новые видео" {{if $smarty.server.SCRIPT_NAME=='/videos_list.php' && $list_videos_type=='latest'}}class="selected"{{/if}}>Новые видео</a></li>
 				<li><a href="{{$config.project_url}}/top-rated/"  title="Самые рейтинговые" {{if $smarty.server.SCRIPT_NAME=='/videos_list.php' && $list_videos_type=='rating'}}class="selected"{{/if}}>Рейтинговые</a></li>
@@ -71,12 +82,16 @@
 				</nav>
 				<div class="g_clear"></div>
 			</div>
-<!--			<div id="text_menu">
+			
+			<!--			
+			<div id="text_menu">
 				<a href="{{$config.project_url}}/invite_friend.php">Пригласить друга</a>
 				&nbsp;&nbsp;|&nbsp;&nbsp;
 				<a href="{{$config.project_url}}/support.php">Поддержка</a>
 			</div>
 			-->
+			
+			
 			<div class="g_clear"></div>
 		</div>
 	</div>
